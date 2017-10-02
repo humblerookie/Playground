@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Playground</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="google_status_fmt">Google User: %s</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="login.hint_email">Email address*</string>
+    <string name="login.hint_password">Password*</string>
+    <string name="login.forgot_password">Forgot Password?</string>
+    <string name="login.try_other">-or try other ways-</string>
+    <string name="login.label.google">Google</string>
+    <string name="login.label.facebook">Facebook</string>
+    <string name="login.new_here">New here?&#160;</string>
+    <string name="login.label.signup">Sign Up</string>
+    <string name="login.label.login">Login</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+
+
+    <string name="signup.title.registration">Registration</string>
+    <string name="login.hint_fullname">Full name*</string>
+    <string name="login.label.register">Register</string>
+
+    <string name="facebook_app_id">363927567376648</string>
+    <string name="fb_login_protocol_scheme">fb363927567376648</string>
+    <string name="title_activity_search">SearchActivity</string>
+
+    <string name="icon.close">clear</string>
+    <string name="icon.arrow_back">arrow_back</string>
+    <string name="icon.search">search</string>
+
+    <string name="search.hint.enter_movie">Type a movie, actor or genre</string>
+    <string name="search.label.release_date">Release Date</string>
+    <string name="search.label.produced_by">By</string>
+
+    <string name="common.label.permission_settings">Settings</string>
+    <string name="common.label.ok">OK</string>
+    <string name="error.google.connectservices">Google login is temporarily unavailable.</string>
+    <string name="login.label.rest_password">Reset Password</string>
+    <string name="login.label.forgot_password">Forgot Password</string>
+
+    <string name="login.forgot_password.success">An email is sent with further instructions to reset your password</string>
+    <string name="login.forgot_password.failure">Could not reset password. Please check the email address.</string>
+
+    <string name="error.splash.registration_device">Oops! we couldn\'t register your app. Try again later.</string>
+    <string name="error.login.login_failure">Could not login. Please try again.</string>
+    <string name="error.login.password_format">Invalid password. Must be 8 to 16 characters and contain 1 number.</string>
+    <string name="error.login.email_format">Invalid email</string>
+    <string name="error.signup.fullname_format">Full name must have a minimum of two characters.</string>
+    <string name="error.signup.invalid_credentials">An error occurred during signup. Please check the credentials</string>
+    <string name="error.common.network">Network is unavailable. Please check your network connection.</string>
+    <string name="error.common.unreachable">Could not connect to our servers. Please try after sometime.</string>
+    <string name="error.login.invalid_creds">Either email or password is incorrect. Please check the same.</string>
+    <string name="error.login.facebook_retrieve">Could not login with facebook</string>
+    <string name="error.login.google">Could not login with google</string>
+
+</resources>

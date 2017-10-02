@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="search_row_height">83.3dp</dimen>
+
+    <dimen name="font_tiny">8.3sp</dimen>
+
+    <dimen name="font_huge">17.3sp</dimen>
+
+    <dimen name="margin_large">12.5dp</dimen>
+    <dimen name="margin_huge">16dp</dimen>
+
+    <dimen name="button_normal_height">26.2dp</dimen>
+
+    <dimen name="icon_small">15dp</dimen>
+
+
+    <dimen name="font_small">10sp</dimen>
+    <dimen name="font_normal">11sp</dimen>
+    <dimen name="margin_atomic">3.3dp</dimen>
+    <dimen name="margin_tiny">5.6dp</dimen>
+    <dimen name="margin_small">7.8dp</dimen>
+    <dimen name="logo_size_medium">56.7dp</dimen>
+    <dimen name="logo_size">66.7dp</dimen>
+
+    <dimen name="margin_normal">10dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="toolbar_ext_height">180dp</dimen>
+    <dimen name="rating_bar_width">80dp</dimen>
+    <dimen name="min_text_height">20dp</dimen>
+    <dimen name="dp75">75dp</dimen>
+</resources>

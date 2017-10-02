@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F5F5F5</color>
+    <color name="colorPrimaryDark">#E5E5E5</color>
+    <color name="colorAccent">#E91E63</color>
+    <color name="colorAccentLight">#FC5188</color>
+    <color name="colorToolbar">#F0F0F0</color>
+    <color name="teal">#009688</color>
+    <color name="deep_blue">#16425B</color>
+    <color name="deep_blue_87">#21586E</color>
+    <color name="deep_blue_36">#ACBAC2</color>
+    <color name="deep_blue_70">#577688</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="gold">#FFC107</color>
+    <color name="white_80">#EAEAEA</color>
+    <color name="black_08">#14000000</color>
+    <color name="black_12">#1F000000</color>
+    <color name="black_24">#3F000000</color>
+    <color name="black_38">#61000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_54">#8A000000</color>
+    <color name="black_70">#B3000000</color>
+    <color name="black_87">#DE000000</color>
+    <color name="white_08">#14ffffff</color>
+    <color name="white_12">#1Fffffff</color>
+    <color name="white_38">#61ffffff</color>
+    <color name="white_50">#8ffffff0</color>
+    <color name="white_54">#8Affffff</color>
+    <color name="white_70">#B3ffffff</color>
+    <color name="white_87">#DEffffff</color>
+    <color name="white">@android:color/white</color>
+    <color name="black">@android:color/black</color>
+
+    <color name="red_400">#ef5350</color>
+    <color name="red_500">#f44336</color>
+    <color name="red_900">#b71c1c</color>
+</resources>
