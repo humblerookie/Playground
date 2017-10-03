@@ -1,19 +1,17 @@
 package com.bariski.playground
 
 import android.arch.paging.PagedListAdapter
-import android.graphics.Color
 import android.support.v7.recyclerview.extensions.DiffCallback
 import android.support.v7.widget.RecyclerView
-import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-class MyPagedListAdapter(diffCallback: DiffCallback<String>) : PagedListAdapter<String, MyPagedListAdapter.ViewHolder>(diffCallback) {
+class MyPagedListAdapter(diffCallback: DiffCallback<User>) : PagedListAdapter<User, MyPagedListAdapter.ViewHolder>(diffCallback) {
 
     val TAG = "Adapter"
     override fun onBindViewHolder(holder: MyPagedListAdapter.ViewHolder?, position: Int) {
-        Log.d(TAG, " Is Item${getItem(position) != null}")
         getItem(position)?.let {
             holder?.setData(it)
         }
@@ -21,18 +19,16 @@ class MyPagedListAdapter(diffCallback: DiffCallback<String>) : PagedListAdapter<
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyPagedListAdapter.ViewHolder {
-        val t = TextView(parent?.context)
-        t.textSize = 18f
-        t.setPadding(20, 20, 20, 20)
-        parent?.resources?.let { t.height = it.getDimension(R.dimen.dp75).toInt() }
-        t.setTextColor(Color.BLACK)
-        return ViewHolder(t)
+        val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_user, parent, false)
+        return ViewHolder(view)
     }
 
-    class ViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-
-        fun setData(s: String) {
-            (view as TextView).text = s
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        private val name: TextView = view.findViewById(R.id.firstName)
+        private val email: TextView = view.findViewById(R.id.email)
+        fun setData(u: User) {
+            name.text = u.firstName
+            email.text = u.email
         }
 
     }

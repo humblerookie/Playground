@@ -23,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
                 .setInitialLoadSizeHint(10)
                 .setEnablePlaceholders(true)
                 .build()
-        val pagedList = PagedList.Builder<String, String>()
+        val pagedList = PagedList.Builder<Int, User>()
                 .setConfig(config)
                 .setDataSource(MyDataSource())
                 .setMainThreadExecutor(UiThreadExecutor())
@@ -53,13 +53,14 @@ class HomeActivity : AppCompatActivity() {
     }
 
 
-    private val diffCallback = object : DiffCallback<String>() {
-        override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
+    private val diffCallback = object : DiffCallback<User>() {
+        override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
+            return oldItem.id == newItem.id
+        }
+
+        override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
-            return oldItem == newItem
-        }
     }
 }
