@@ -25,7 +25,7 @@ class HomeActivity : AppCompatActivity() {
                 .build()
         val pagedList = PagedList.Builder<Int, User>()
                 .setConfig(config)
-                .setDataSource(MyDataSource())
+                .setDataSource(SequentialDataSource())
                 .setMainThreadExecutor(UiThreadExecutor())
                 .setBackgroundThreadExecutor(BackgroundThreadExecutor())
                 .build()
