@@ -6,16 +6,12 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.TextView
 
 class MyPagedListAdapter(diffCallback: DiffCallback<User>) : PagedListAdapter<User, MyPagedListAdapter.ViewHolder>(diffCallback) {
-
-    val TAG = "Adapter"
     override fun onBindViewHolder(holder: MyPagedListAdapter.ViewHolder?, position: Int) {
-        getItem(position)?.let {
-            holder?.setData(it)
-        }
-
+        holder?.setData(getItem(position))
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyPagedListAdapter.ViewHolder {
@@ -25,10 +21,18 @@ class MyPagedListAdapter(diffCallback: DiffCallback<User>) : PagedListAdapter<Us
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val name: TextView = view.findViewById(R.id.firstName)
-        private val email: TextView = view.findViewById(R.id.email)
-        fun setData(u: User) {
-            name.text = u.firstName
-            email.text = u.email
+        private val progress: ProgressBar = view.findViewById(R.id.progress)
+        fun setData(u: User?) {
+            if (u == null) {
+                //Show loader, item is being loaded
+                name.visibility = View.GONE
+                progress.visibility = View.VISIBLE
+            } else {
+                name.text = u.name
+                name.visibility = View.VISIBLE
+                progress.visibility = View.GONE
+            }
+
         }
 
     }

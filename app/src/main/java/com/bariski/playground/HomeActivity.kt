@@ -11,21 +11,23 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), AlphabetAdapter.ItemClickListener {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        alphabetList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        alphabetList.adapter = AlphabetAdapter(this)
         val config = PagedList.Config.Builder()
-                .setPageSize(10)
-                .setInitialLoadSizeHint(10)
+                .setPageSize(5)
                 .setEnablePlaceholders(true)
                 .build()
         val pagedList = PagedList.Builder<Int, User>()
                 .setConfig(config)
-                .setDataSource(SequentialDataSource())
+                .setDataSource(MyTiledDataSource())
                 .setMainThreadExecutor(UiThreadExecutor())
                 .setBackgroundThreadExecutor(BackgroundThreadExecutor())
                 .build()
@@ -63,4 +65,9 @@ class HomeActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onItemClick(position: Int) {
+        list.scrollToPosition(position * 10)
+    }
+
 }
