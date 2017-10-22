@@ -23,7 +23,6 @@ class HomeActivity : AppCompatActivity(), AlphabetAdapter.ItemClickListener {
         alphabetList.adapter = AlphabetAdapter(this)
         val config = PagedList.Config.Builder()
                 .setPageSize(5)
-                .setEnablePlaceholders(true)
                 .build()
         val pagedList = PagedList.Builder<Int, User>()
                 .setConfig(config)
